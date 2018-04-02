@@ -30,6 +30,7 @@ Simple FTP Node server implimentation of [ftp-srv](https://www.npmjs.com/package
 
  - Change FTP IP & port
  - Change `logDirectory` location
+ - Change `root` folder location in resolve()
 
 ### 4) Update FTP Login
 
