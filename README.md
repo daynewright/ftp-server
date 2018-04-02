@@ -1,6 +1,6 @@
 # 🗄 Simple FTP Node Server
 
-Simple FTP Node server implimentation of [ftp-srv](https://www.npmjs.com/package/ftp-srv#file-system).
+Simple FTP Node server implimentation of [ftp-srv](https://www.npmjs.com/package/ftp-srv).
 
  - Logs create & delete events to console.
  - Logs create & delete events to `ftp-<DATE>.log` file
@@ -19,7 +19,9 @@ Simple FTP Node server implimentation of [ftp-srv](https://www.npmjs.com/package
  `npm install`
 
  You need to replace two files in ftp-srv for event emitters _(temporary solution)_:
-    `node-modules/ftp-srv/src/commands/registration/mkd.js` with `TEMP/mkd.js`
+<br/>
+    `node-modules/ftp-srv/src/commands/registration/mkd.js` with `TEMP/mkd.js` 
+<br/>
     `node-modules/ftp-srv/src/commands/registration/dele.js` with `TEMP/dele.js`
 
 ### 3) Update configs:
