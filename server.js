@@ -43,15 +43,14 @@ ftpServer.on('login', ({connection, username}, resolve, reject) => {
     connectionEventWatch('RMD', 'DIRECTORY DELETED', 'DIRECTORY DELETE ERROR');
 
     function connectionEventWatch(CMD, MESSAGESUCCESS, MESSAGEFAILURE) {
-        const today = new Date().toJSON();
-    
+
         connection.on(CMD, (error, fileName) => {
             if(!error){
-                log.info(MESSAGESUCCESS + ': ', process.cwd()+'/'+ fileName, ' on ', today);
+                log.info(MESSAGESUCCESS + ': ', process.cwd()+'/'+ fileName, ' on ', new Date().toJSON());
                 console.log(colors.blue.underline(MESSAGESUCCESS), ' ', process.cwd()+'/'+fileName);
                 console.log(colors.blue.underline('BY USER:'), ' ', username);
             } else {
-                log.error(MESSAGEFAILURE + ': ', error, ' on  ', today);
+                log.error(MESSAGEFAILURE + ': ', error, ' on  ', new Date().toJSON());
                 console.log(colors.red.underline(MESSAGEFAILURE), ' ', error);
             }
         });
